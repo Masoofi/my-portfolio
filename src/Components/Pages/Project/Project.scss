@@ -1,0 +1,246 @@
+.Project_section {
+  height: 90vh;
+  .toptitle {
+    display: none;
+  }
+  .projectCollapse {
+    .collapseHeaderIconCollapsed {
+      transition: 0.3s all linear;
+      transform: rotate(-90deg);
+      color: var(--secondary-white);
+    }
+    .collapseHeaderIconExpands {
+      transition: 0.3s all linear;
+      transform: rotate(0);
+      color: var(--secondary-white);
+    }
+    .ant-collapse-header {
+      height: 40px;
+      padding: 10px 18px;
+
+      border-bottom: 1px solid var(--page-bg-color);
+      span.ant-collapse-header-text {
+        font-size: 16px;
+      }
+    }
+    .ant-collapse-header-text {
+      font-size: var(--lables);
+      color: var(--secondary-white);
+    }
+    .ant-collapse-content-box {
+      padding: 22px;
+    }
+  }
+  display: flex;
+  color: #607b96;
+  .Project_menu {
+    border-right: 1px solid #1e2d3d;
+    min-width: 311px;
+    & h4 {
+      border-bottom: 1px solid #1e2d3d;
+      height: 40px;
+      padding: 8px;
+      margin-left: 16px;
+    }
+  }
+  .left_main {
+    color: #607b96;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 17px;
+    .isActive {
+      color: var(--secondary-white);
+    }
+    .false {
+      color: gray;
+    }
+    & svg {
+      margin-left: 16px;
+      margin-right: 8px;
+    }
+    & p {
+      font-size: 16px;
+    }
+  }
+
+  .Project_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 115px;
+    padding-bottom: 328px;
+    margin: 0 auto;
+    gap: 40px;
+    // border-right: 1px solid #1e2d3d;
+  }
+  .card_container {
+    & .ProjectName {
+      font-size: 16px;
+      color: #5565e8;
+      font-weight: 700;
+    }
+    & .ProjectTitle {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .cards {
+      position: relative;
+      & img {
+        width: 100%;
+        object-fit: contain;
+      }
+      & i svg {
+        background-color: rgb(111, 219, 183);
+        color: #000000;
+        font-size: 28px;
+        padding: 2px;
+        border-radius: 5px;
+      }
+      margin-top: 10px;
+      border-radius: 15px;
+      box-shadow: 0px 1px 100px 0px #1e2730;
+      border: 1px solid #1e2d3d;
+      width: 372px;
+      height: 315px;
+      &_Body p {
+        padding: 24px 35px 22px 31px;
+      }
+      & button {
+        cursor: pointer;
+        margin-left: 31px;
+        border: none;
+        color: aliceblue;
+        background-color: #1c2b3a;
+        border-radius: 8px;
+        padding: 10px 14px;
+      }
+    }
+  }
+
+  .Projects {
+    width: 100%;
+    .Project_title {
+      border-bottom: 1px solid #1e2d3d;
+      border-right: 1px solid #1e2d3d;
+      height: 40px;
+      width: 103%;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      & p {
+        display: none;
+      }
+      & div {
+        display: flex;
+        column-gap: 6px;
+        align-items: center;
+        & .closeBtn {
+          margin-left: 40px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.Pro_empty {
+  margin-top: 40px;
+  width: 26px;
+  border-left: 1px solid var(--page-bg-color);
+  .bar {
+    width: 18.5px;
+    height: 7px;
+    margin: 5px 3px;
+    background: var(--secondary-gray);
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .Project_section {
+    height: 86vh;
+     overflow: hidden;
+     .Project_cards{
+      height: 100%;
+       overflow:scroll;
+     }
+    &_cards {
+      height: auto;
+    }
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  .Project_section {
+     height: 86vh;
+     overflow: hidden;
+     .Project_cards{
+      height: 100%;
+       overflow:scroll;
+     }
+    &_cards {
+      height: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .Project_section {
+    .toptitle {
+      display: block;
+    }
+    .toptitle {
+      padding: 21px 71px 29px 27px;
+      color: var(--secondary-white);
+      font-size: 14px;
+    }
+    .projectCollapse {
+      .ant-collapse-header {
+        padding: 8px 18px;
+        border-bottom: none;
+        background-color: #1e2d3d;
+      }
+    }
+
+    .Project_title {
+      border-bottom: none !important;
+      margin-top: 38px;
+      & p {
+        display: block !important;
+        color: var(--secondary-white);
+        padding: 0 12px;
+      }
+      .closeBtn {
+        display: none;
+      }
+    }
+    height: auto;
+    flex-wrap: wrap;
+    .left_main {
+      padding: 0 10px;
+    }
+    .Project_cards {
+      padding-top: 16px;
+      padding-bottom: 40px;
+    }
+    .Project_menu {
+      width: 100%;
+    }
+    .card_container {
+      .cards {
+        width: 291px;
+      }
+      &_Body p {
+        padding: 31px 23px 31px 29px;
+      }
+    }
+  }
+  .Pro_empty {
+    display: none;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .Project_section {
+    height: auto;
+    &_cards {
+      height: auto;
+    }
+  }
+}
